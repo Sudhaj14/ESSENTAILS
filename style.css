@@ -1,0 +1,256 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #001f3f, #00102b); /* Galaxy blue background */
+    color: #8A2BE2; /* Violet text color */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header {
+    background: linear-gradient(90deg, #8A2BE2, #5D3FD3); /* Violet gradient */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    animation: slideInDown 1s ease-out;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: pulse 2s infinite;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background: #1f1f2e; /* Dark background for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+    color: #E0B0FF; /* Light violet text color */
+}
+
+h2 {
+    color: #FFD700; /* Gold color */
+    border-bottom: 2px solid #8A2BE2; /* Violet border */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    animation: bounceIn 1s ease;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 8px 0;
+    line-height: 1.6;
+    animation: fadeInLeft 1s ease;
+}
+
+a {
+    color: #FFD700; /* Gold link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: linear-gradient(90deg, #8A2BE2, #5D3FD3); /* Violet gradient */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: jello 1.5s infinite;
+}
+.circular-image {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area properly */
+}
+
+button:hover {
+    background: #7B1FA2; /* Darker violet on hover */
+    transform: scale(1.05);
+}
+video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #a5a5ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out;
+}
+
+.disclaimer {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes jello {
+    from,
+    11.1%,
+    to {
+        transform: none;
+    }
+    22.2% {
+        transform: skewX(-12.5deg) skewY(-12.5deg);
+    }
+    33.3% {
+        transform: skewX(6.25deg) skewY(6.25deg);
+    }
+    44.4% {
+        transform: skewX(-3.125deg) skewY(-3.125deg);
+    }
+    55.5% {
+        transform: skewX(1.5625deg) skewY(1.5625deg);
+    }
+    66.6% {
+        transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    }
+    77.7% {
+        transform: skewX(0.390625deg) skewY(0.390625deg);
+    }
+    88.8% {
+        transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    }
+}
+
+header, section, footer {
+    animation: fadeIn 1s ease-in;
+}
+
+.developer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.developer-list li {
+    list-style: none;
+    text-align: center;
+    margin: 10px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.developer-list img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #8A2BE2; /* Violet border */
+    transition: transform 0.3s ease;
+}
+
+.developer-list img:hover {
+    transform: scale(1.1);
+}
+
+.developer-list p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #E0B0FF; /* Light violet text color */
+}
